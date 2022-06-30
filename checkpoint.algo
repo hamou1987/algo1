@@ -1,0 +1,25 @@
+ALGORITHM algorithm_name
+VAR
+   ch :  STRING;
+   nbv,nbw,i: INTEGER 
+BEGIN
+    nbw:=1
+    nbv:=0
+    i:=1
+    Write("donner une chaine")
+    Read(ch)
+    WHILE (ch[i]<>".") DO
+        IF (ch[i] in ["a","e","o","u","i","y"]) THEN
+            nbv:=nbv+1
+        END_IF
+        IF (ch[i]=" ") THEN
+            nbw:=nbw+1
+        END_IF
+        i:=i+1
+    END_WHILE
+    Write("nbre de words",nbw)
+    Write("nbre de voyels",nbv)
+    Write("longueur",i+1)
+
+    
+END
